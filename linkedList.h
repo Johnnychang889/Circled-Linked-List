@@ -1,8 +1,21 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
+
+constexpr auto width = 640;
+constexpr auto height = 480;
+constexpr auto N = 10;
+constexpr auto MaxRad = 30;
+
+
 #include <iostream>
+#include <random>
+#include <ctime>
 
 struct Point {
 	int x;
 	int y;
+	int r;
 };
 
 struct Node {
@@ -33,3 +46,10 @@ void insert(Node *head, Point p, int n);
 void deleteNth(Node **head, int n);
 
 void deleteList(Node **head);
+
+void createRandomList(Node *head, int n);
+
+//utils
+Point createRandomPoint();
+
+#endif
